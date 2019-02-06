@@ -4,7 +4,7 @@
 
   
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
     <AssemblyName>Log4ALA</AssemblyName>
     <PackageId>Log4ALA</PackageId>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
@@ -34,8 +34,8 @@
   </ItemGroup>
 
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <DefineConstants>$(DefineConstants);NET45</DefineConstants>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <DefineConstants>$(DefineConstants);NET452</DefineConstants>
     <SignAssembly>True</SignAssembly>
     <DelaySign>False</DelaySign>
     <!--<AssemblyOriginatorKeyFile>../servicestack.snk</AssemblyOriginatorKeyFile>-->
@@ -45,9 +45,9 @@
     <DefineConstants>$(DefineConstants);NETSTANDARD2_0</DefineConstants>
   </PropertyGroup>
  
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
-    <PackageReference Include="Microsoft.WindowsAzure.ConfigurationManager" Version="3.1.0" />
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452'">
     <PackageReference Include="log4net" Version="2.0.5" />
+    <PackageReference Include="Microsoft.Azure.ConfigurationManager" Version="4.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 
   </ItemGroup>
