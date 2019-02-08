@@ -366,7 +366,8 @@ namespace Log4ALA
 #else
                 var appender = (log4net.Appender.RollingFileAppender)LogManager.GetRepository().GetAppenders().Where(ap => ap.Name.Equals(internalAppenderName)).FirstOrDefault();
 #endif
-
+                if (appender == null)
+                    return false;
 
                 if (!string.IsNullOrWhiteSpace(appenderFile))
                 {
