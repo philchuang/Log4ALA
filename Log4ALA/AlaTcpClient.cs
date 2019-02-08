@@ -12,7 +12,7 @@ namespace Log4ALA
     public class AlaTcpClient
     {
         // Azure Log Analytics API server address. 
-        protected const String AlaApiUrl = "ods.opinsights.azure.com";
+        protected const String AlaApiUrl = "ods.opinsights.azure.us";
 
         private byte[] sharedKeyBytes;
         private string workSpaceID;
