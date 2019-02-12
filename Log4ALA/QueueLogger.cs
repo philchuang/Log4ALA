@@ -408,7 +408,7 @@ namespace Log4ALA
                     // and replacefor alaServerAddr with http://localhost/anything by setting the property debugHTTPReqURI=http://localhost/anything to inspect the http request 
                     // which will then be logged into log4ALA_info.log instead of sending to Azure Log Analytics data collector API.
 
-                    string alaServerAddr = $"{appender.WorkspaceId}.ods.opinsights.azure.com";
+                    string alaServerAddr = $"{appender.WorkspaceId}.ods.opinsights.azure.us";
                     string alaServerContext = $"/api/logs?api-version={appender.AzureApiVersion}";
 
                     if (!string.IsNullOrWhiteSpace(appender.DebugHTTPReqURI)){
